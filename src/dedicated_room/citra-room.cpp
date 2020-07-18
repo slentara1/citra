@@ -339,7 +339,7 @@ int main(int argc, char** argv) {
 
     Network::Init();
     if (std::shared_ptr<Network::Room> room = Network::GetRoom().lock()) {
-        if (!room->Create(room_name, room_description, "", port, password, max_members, username,
+        if (!room->Create(room_name, room_description, 10.0.0.148, port, password, max_members, username,
                           preferred_game, preferred_game_id, std::move(verify_backend), ban_list,
                           enable_citra_mods)) {
             std::cout << "Failed to create room: \n\n";
